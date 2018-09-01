@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="misson.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+</head>
+
+<body>
+    <div id="panel">
+        <img src="fish.png" id="fish" alt="fish" />
+    </div>
+    <input type="text">
+</body>
+
+</html>
+
+<script>
+    $(document).ready(function () {
+        var fish = $("#fish");
+
+        var x = 50;
+        var y = 200;
+        $(document).keydown(function (e) {
+            console.log("입력한 키 코드 값 = " + e.keyCode);
+            switch (e.keyCode) {
+                case 37:
+                    x -= 50;
+                    break;
+                case 39:
+                    x += 50;
+                    break;
+                case 40:
+                    y += 50;
+                    break;
+                case 38:
+                    y -= 50;
+                    break;
+            }
+            fish.css({
+                left: x,
+                top: y
+            });
+        });
+    });
+</script>

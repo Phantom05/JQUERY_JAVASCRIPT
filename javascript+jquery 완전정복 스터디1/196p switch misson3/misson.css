@@ -1,0 +1,10 @@
+* { margin: 0; padding: 0; border: 0; outline: none; }
+a { text-decoration: none; }
+a:hover { color: inherit; }
+ol ,ul, li { list-style: none; }
+
+body { font-size: 9px; }
+
+#panel { position: relative; left: 50px; top: 50px;  width: 500px; height: 500px; border: 1px solid #999;}
+#fish { position: absolute; left: 50px; top: 200px; }
+input { position: absolute; top: 600px; left: 50px; width: 500px; height: 40px; background: #ccc;}

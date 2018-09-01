@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="div">
+        <p>1. 냉장고</p>
+        <p>2. TV</p>
+        <p>3. 세탁기</p>
+    </div>
+    <button id="random" value="숫자돌리기">숫자돌리기</button>
+    <script>
+        var random;
+        var random_val = Math.floor(Math.random() * 10) + 1;
+        var random_btn = document.getElementById("random");
+        var div = document.getElementById("div");
+        random_btn.addEventListener("click", random_func);
+        function random_func() {
+            random = Math.floor(Math.random() * 10) + 1;
+            console.log(random);
+            // console.log(random_val);
+            // console.log(div.childNodes);
+            // console.log(div);
+            if (random === 1) {
+
+                var div_node0 = div.childNodes[0].nodeValue;
+                console.log(div_node0);
+                console.log(div_node0 + "냉장고 당첨!");
+            } else if (random === 2) {
+                console.log("TV 당점!");
+            } else if (random === 3) {
+                console.log("세탁기 당첨!");
+            } else {
+                console.log("꽝 입니다!!!!");
+            }
+
+            if (random == random_val) {
+                console.log("너 걸렸다 너 걸렸다 너 걸렸다 너 걸렸다 너 걸렸다 너 걸렸다 너 걸렸다 너 걸렸다 너 걸렸다 너 걸렸다 너 걸렸다 너 걸렸다");
+            }
+        }
+
+
+    </script>
+</body>
+
+</html>
