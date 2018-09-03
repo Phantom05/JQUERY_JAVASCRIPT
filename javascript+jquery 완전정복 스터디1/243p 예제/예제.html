@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+</head>
+
+<body>
+    <button id="btnStart">주사위 돌리기</button>
+    <div id="append"></div>
+    <script>
+        $(document).ready(function () {
+            var num, count = 0;
+            $("#btnStart").click(function () {
+
+                while (true) {
+                    count++;
+                    num = Math.floor(Math.random() * 600) + 1;
+                    if (num == 3) {
+                        $("#append").append(count + "번째 3이 나왔습니다! 탈출! <br/>");
+                        count = 0;
+                        break;
+                    } else {
+                        $("#append").append(count + "번째" + num + "이 나왔습니다. 3이 나올때 까지 주사위를 돌려주세요. <br/>");
+                    }
+                }
+            });
+        });
+    </script>
+
+    <p>I would like to say</p>
+    <b class="bTag">Hello</b>
+    <script>
+        var a = $("p").next();
+        if (a.hasClass("bTag")) {
+            a.remove();
+        }
+        console.log(a);
+    </script>
+
+</body>
+
+</html>

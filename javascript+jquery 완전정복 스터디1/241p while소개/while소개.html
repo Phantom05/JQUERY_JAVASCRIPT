@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // for 문 무한루프
+        /* for (; ;) {
+            var value = window.prompt("password input");
+
+            if (value == "1234") {
+                alert("환영합니다.");
+                document.write("환영합니다.");
+                break;
+            } else {
+                alert("비밀번호가 틀렸습니다. 다시 입력해주세요.");
+            }
+        } */
+
+
+        while (true) {
+            var value = window.prompt("password input");
+
+            if (value == "1234") {
+                alert("환영합니다.");
+                document.write("환영합니다.");
+                break;
+            } else {
+                alert("password ERROR");
+            }
+        }
+    </script>
+</body>
+
+</html>

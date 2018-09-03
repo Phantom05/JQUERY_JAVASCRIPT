@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="misson4.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+</head>
+
+<body>
+
+    <div>
+        <button id="btnStart">배열시작</button>
+    </div>
+    <div class="image-container">
+        <img src="img1.jpg" alt="">
+        <img src="img2.jpg" alt="">
+        <img src="img3.png" alt="">
+        <img src="img4.png" alt="">
+        <img src="img5.png" alt="">
+    </div>
+    <script>
+        $(document).ready(function () {
+            var btnStart = document.getElementById("btnStart");
+            var imgLen = $(".image-container > img").length;
+            console.log(imgLen);
+            var x, y;
+            btnStart.addEventListener("click", clickFunc);
+            function clickFunc() {
+                for (var i = 0; i < imgLen; i++) {
+                    x = 100 + ((i % 3) * 250);
+                    y = 100 + (parseInt(i / 3) * 250);
+                    console.log(x);
+                    console.log(y);
+
+
+                    $(".image-container > img").eq(i).css({
+                        left: x,
+                        top: y
+                    });
+                }
+            }
+
+            console.log("1 / 5 의 나머지는 = " + 1 % 5);
+            console.log("1 / 5 = " + 1 / 5);
+            console.log("342 / 340 의 나머지는 = " + 342 % 340);
+            console.log("330 / 340 = " + 330 / 340);
+            // console.log(2 % 5);
+            // console.log(3 % 5);
+            // console.log(4 % 5);
+        });
+    </script>
+</body>
+
+</html>
