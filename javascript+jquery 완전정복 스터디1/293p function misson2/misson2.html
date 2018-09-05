@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var result;
+        function sachic(booho, num1, num2) {
+
+            switch (booho) {
+                case "+":
+                    result = num1 + num2;
+                    break;
+                case "-":
+                    result = num1 - num2;
+                    break;
+                case "*":
+                    result = num1 * num2;
+                    break;
+                case "/":
+                    result = num1 / num2;
+                    break;
+                case "%":
+                    result = num1 % num2;
+                    break;
+                default:
+                    alert("잘못된 수식입니다.");
+            }
+            return result;
+        }
+
+        document.write("1 결과 = " + sachic("+", 20, 10) + "<br/>");
+        document.write("2 결과 = " + sachic("-", 20, 10) + "<br/>");
+        document.write("3 결과 = " + sachic("*", 20, 10) + "<br/>");
+        document.write("4 결과 = " + sachic("/", 20, 10) + "<br/>");
+        document.write("5 결과 = " + sachic("%", 20, 10) + "<br/>");
+    </script>
+</body>
+
+</html>

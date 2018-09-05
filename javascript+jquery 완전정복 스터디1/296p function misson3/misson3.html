@@ -1,0 +1,49 @@
+<script>
+    function cacul(op, num1, num2) {
+        var result;
+
+        switch (op) {
+            case "+":
+                result = sum(num1, num2);
+                break;
+            case "-":
+                result = sub(num1, num2);
+                break;
+            case "*":
+                result = mul(num1, num2);
+                break;
+            case "/":
+                result = div(num1, num2);
+                break;
+            default:
+                result = "잘못된 수식 입니다.";
+        }
+        return result;
+    }
+
+    function sum(num1, num2) {
+        return num1 + num2;
+    }
+
+    function sub(num1, num2) {
+        return num1 - num2;
+    }
+
+    function mul(num1, num2) {
+        return num1 * num2;
+    }
+
+    function div(num1, num2) {
+        return num1 / num2;
+    }
+    document.write("1 결과 = " + cacul("+", 20, 10) + "<br/>");
+    document.write("2 결과 = " + cacul("-", 20, 10) + "<br/>");
+    document.write("3 결과 = " + cacul("*", 20, 10) + "<br/>");
+    document.write("4 결과 = " + cacul("/", 20, 10) + "<br/>");
+    document.write("5 결과 = " + cacul(20, 10) + "<br/>");
+    document.write("2 결과 = " + sum(20, 10) + "<br/>");
+    document.write("3 결과 = " + sub(20, 10) + "<br/>");
+    document.write("4 결과 = " + mul(20, 10) + "<br/>");
+    document.write("5 결과 = " + div(20, 10) + "<br/>");
+
+</script>
