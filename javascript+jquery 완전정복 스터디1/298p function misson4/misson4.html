@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="misson4.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+</head>
+
+<body>
+    <p>container1</p>
+    <div class="image-container" id="container1">
+        <img src="img1.jpg" alt="">
+        <img src="img2.jpg" alt="">
+        <img src="img3.png" alt="">
+        <img src="img4.png" alt="">
+        <img src="img5.png" alt="">
+        <img src="img1.jpg" alt="">
+        <img src="img2.jpg" alt="">
+        <img src="img3.png" alt="">
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            var images = $("#container1 img");
+            var imgLen = images.length;
+            var x = 0;
+            var y = 0;
+            console.log(imgLen);
+            function imgArray(cols, wid, hei) {
+                for (var i = 0; i < imgLen; i++) {
+
+                    var img = images.eq(i);
+
+                    x = (i % cols) * wid + 70;
+                    y = parseInt(i / cols) * hei + 70;
+
+                    img.css({
+                        left: x,
+                        top: y
+                    });
+                }
+            }
+
+            imgArray(4, 350, 300);
+        });
+    </script>
+</body>
+
+</html>
