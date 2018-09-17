@@ -1,0 +1,8 @@
+body { position: relative; width: 1200px; margin: 0 auto;}
+#fish_box { width: 1000px; height: 600px; position: relative; top: 100px; left: 100px; border: 2px solid #d3d3d3; display: block; }
+#fish_box img { width: 150px; height: 120px; position: absolute; }
+
+#input_box { position: relative; top: 150px; width: 500px; margin: 0 auto;}
+#input_box > label { display: block;}
+#input_box > label > input { width: 419px; text-align: center;}
+#input_box > button { width: 500px;}

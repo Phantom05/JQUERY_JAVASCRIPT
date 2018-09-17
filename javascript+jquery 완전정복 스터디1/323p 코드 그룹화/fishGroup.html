@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="fish_box">
+        <img src="fish.png" alt="물고기" id="fish">
+    </div>
+    <div id="input_box">
+        <label for="xPos">x값 입력 : <input type="number" id="xPos" min="1" max="850"></label>
+        <label for="yPos">y값 입력 : <input type="number" id="yPos" min="1" max="480"></label>
+
+        <button id="fish_btn">물고기 움직이기</button>
+        
+    </div>
+
+</body>
+
+</html>
+
+<script>
+    var fish, xPos, yPos, btn;
+    $(document).ready(function(){
+        fishInit();
+        fishBtn();
+    });
+
+    function fishInit() {
+        fish = $("#fish");
+        xPos = $("#xPos");
+        yPos = $("#yPos");
+        btn = $("#fish_btn");
+    }
+
+    function fishBtn() {
+        btn.click(function(){
+            fishValue();
+        });
+    }
+    
+    function fishValue() {
+        if(xPos.val() > 0 && xPos.val() < 850 && yPos.val() > 0 && yPos.val() < 480){
+            fish.animate({
+                left : xPos.val() + "px",
+                top : yPos.val() + "px"
+            },1000);
+        } else {
+            alert("범위를 초과 하였거나 입력하지 않았습니다.");
+        }
+        
+    }
+</script>
