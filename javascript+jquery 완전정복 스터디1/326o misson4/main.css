@@ -1,0 +1,2 @@
+#img_box { position: relative; top: 100px; left: 100px; width: 2000px; height: 1500px;  border: 1px solid #000; }
+#img_box > img { position: absolute; left: 0; top: 0;}

@@ -47,7 +47,7 @@
     }
     
     function fishValue() {
-        if(xPos.val() > 0 && xPos.val() < 850 && yPos.val() > 0 && yPos.val() < 480){
+        if(xPos.val() > 0 && xPos.val() < 850 && yPos.val() > 0 && yPos.val() <= 480){
             fish.animate({
                 left : xPos.val() + "px",
                 top : yPos.val() + "px"
