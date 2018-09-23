@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <button id="hello3Btn" style="display: block;">버튼을 눌러주세요.</button>
+    <p>
+
+    </p>
+    <script>
+        // example 1
+        function hello(name) {
+            document.write(name + " 님 환영합니다.<br>");
+        }    
+        hello("웹동네");
+        var func = hello;
+        func("딴동네");
+
+        // example 2
+        function hello1() {
+            console.log("example 2 = hello.");
+        }
+
+        function hello2() {
+            console.log("example 2 = 안녕하세요.");
+        }
+
+        function execute(func) {
+            func();
+        }
+
+        execute(hello1);
+        execute(hello2);
+
+        // example 3
+        var hello3Btn = document.getElementById("hello3Btn");
+        var i = 0;
+
+        function hello3(count) {
+            console.log(count + " : example 3 = 안녕하세요. 환영합니다. ");
+        }
+        
+        hello3Btn.addEventListener("click", function(){
+            i++;
+            hello3(i);
+            
+        });
+
+        // example 4
+
+        setInterval(function () {
+                console.log("안녕하세요. 환영합뉘다아~");
+            }, 1000);
+
+        // example 5
+
+        function createHello() {
+            function hello(user) {
+                console.log(user + "님 방문을 환영합니다.");
+            }
+            return hello;
+        }
+        
+
+        
+        var result = createHello();
+        result("김도현");
+        createHello()("도현");
+
+        
+
+    </script>
+</body>
+</html>
