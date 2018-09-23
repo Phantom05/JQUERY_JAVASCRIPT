@@ -1,0 +1,11 @@
+.tab-menu { list-style: none; height: 80px; }
+/* .tab-menu:after { content:""; display: block; clear: both; } */
+.tab-menu li { width: 99px; height:40px; background-position-y: 0; text-indent: -1000px; overflow: hidden; float:left; }
+.tab-menu li:hover  { background-position-y: -40px;}
+.tab-menu li.select { background-position-y: -80px; height: 80px; }
+.tab-menu li.menuitem1 { background-image: url(newbtn.bar.1.png); }
+.tab-menu li.menuitem2 { background-image: url(newbtn.bar.2.png); }
+.tab-menu li.menuitem3 { background-image: url(newbtn.bar.3.png); }
+.tab-menu li.menuitem4 { background-image: url(newbtn.bar.4.png); }
+.tab-menu li.menuitem5 { background-image: url(newbtn.bar.5.png); }
+.tab-menu li.menuitem6 { background-image: url(newbtn.bar.6.png); }
