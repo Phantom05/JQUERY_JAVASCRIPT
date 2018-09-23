@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var a = 10;
+        var b = new Number(10);
+
+        console.log(a == b);
+        console.log(a);
+        console.log(b);
+        document.write(b);
+        b = new Number(15);
+        console.log(b);
+
+        // function literal
+        // 리터럴 방식
+
+        var hello = function(name) {
+            console.log(name + "님 환영합니다.");
+        }
+        hello("dohyun");
+
+        // 일반적인 방식
+
+        function hello (name) {
+            console.log(name + "님 환영합니다.");
+        }
+        
+        hello("도현");
+
+        // 객체 방식
+
+        var hello2 = new Function("name", "console.log(name + '님 환영합니다.');");
+        hello2("김도현");
+    </script>
+</body>
+</html>
