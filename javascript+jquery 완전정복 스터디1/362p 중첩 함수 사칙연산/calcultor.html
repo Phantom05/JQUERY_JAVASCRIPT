@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+        function calculator(x, op, y) {
+            var result = "";
+
+            switch (op) {
+                case "+" :
+                    result = add(x, y);
+                    break;
+
+                case "-" :
+                    result = sub(x, y);
+                    break;
+
+                case "*" :
+                    result = mul(x, y);
+                    break;
+
+                case "/" :
+                    result = div(x, y);
+                    break;
+                default :
+                    result = "지원하지 않는 연산자 압니다.";
+            }
+
+            return parseInt(result);
+
+
+            function add(x, y) {
+                return x + y;
+            }
+
+            function sub(x, y) {
+                return x - y;
+            }
+
+            function mul(x, y) {
+                return x * y;
+            }
+
+            function div(x, y) {
+                return x / y;
+            }
+            
+        } 
+
+        console.log("1 결과 : " + calculator(8, "-", 5));
+        console.log("2 결과 : " + calculator(324, "+", 2153));
+        console.log("3 결과 : " + calculator(2135, "/", 536));
+        console.log("4 결과 : " + calculator(8321545, "*", 523215));
+    </script>
+</body>
+</html>

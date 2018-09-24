@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+</head>
+<body>
+    <script>
+
+        // function 키워드를 이용하는 방법 (일반적인 함수 정의)
+        function hello(name) {
+            console.log(name + "님 환영합니다.");
+        }
+        hello("도현");
+
+
+        // function literal을 이용한 함수 정의
+        var hello1 = function(name) {
+            console.log(name+"님 환영합니다.");
+        }    
+        hello1("dohyun");
+
+
+        // 리터럴 방식으로 클래스의 멤버함수(메서드)를 만들 때
+        var MyClass = {
+            test : function(){
+                console.log("신기방기");
+            },
+            test2 : function() {
+                for(var i = 0; i < 10; i++) {
+                    console.log(i);
+                }
+            }
+        }
+        MyClass.test();
+        MyClass.test2();
+        console.log(MyClass);
+
+        //Object 방식으로 클래스의 멤버함수(메서드)를 만들 때
+        function MyClass2() {
+            this.tested = function(){
+                console.log("이건 MyClass2 test함수");
+            }
+        }
+
+        var classs = new MyClass2();
+        classs.tested();
+
+        console.log(classs);
+
+        // prototype 방식으로 클래스의 멤버함수를 만들 때
+
+        function MyClass3() {
+
+        }
+        MyClass3.prototype.test3 = function(){
+            console.log("이건 MyClass3의 test3 함수");
+        }
+
+        MyClass3.prototype.test3();
+
+        // 객체 방식을 이용한 함수 정의
+
+        var hel = new Function("name", "console.log(name + '님 환영합니다');");
+
+        hel("도현");
+
+
+        (function(name){
+            console.log(name + "은 너의 이름이다.");
+        })("도현");
+        
+    </script>
+</body>
+</html>
