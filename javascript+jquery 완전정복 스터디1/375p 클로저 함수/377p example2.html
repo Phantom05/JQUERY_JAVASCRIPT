@@ -1,0 +1,70 @@
+<script>
+
+    // 클로저 함수인 경우
+    function createCounter(){
+        var count = 0;
+
+        function addCount(){
+            count++;
+            return count;
+            
+        }
+
+        return addCount;
+        
+    }
+    
+
+    var counter = createCounter();
+
+    console.log("1. count = " + counter());
+    console.log("2. count = " + counter());
+    console.log("3. count = " + counter());
+
+    // 생활코딩 클로저 함수
+
+    function factory_movie(title) {
+        return {
+            get_title : function(){
+                return title;
+            },
+            set_title : function(_title){
+                title = _title;
+            }
+        }
+    }
+    ghost = factory_movie('Ghost in the shell');
+    matrix = factory_movie('Matrix');
+    
+    console.log(ghost.get_title());
+    console.log(matrix.get_title());
+    
+    ghost.set_title('공각기동대');
+    
+    console.log(ghost.get_title());
+    console.log(matrix.get_title());
+
+    // 그냥 한번 만들어 봄
+
+    var len = function() {
+        console.log("가즈아아!!!");
+    }
+
+    window.onload = len();
+
+    // 생활코딩 클로저 함수2
+
+    var arr = [];
+    for(var i = 0; i < 5; i++){
+        arr[i] = function(id){
+            return function(id){
+                return i;
+            }
+        }
+    }
+
+    for(var index in arr){
+        console.log(arr[index]);
+    }
+    
+</script>
