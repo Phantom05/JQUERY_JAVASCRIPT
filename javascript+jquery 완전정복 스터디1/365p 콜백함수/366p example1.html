@@ -1,0 +1,65 @@
+<script>
+
+    function calculator(op, num1, num2, callback){
+
+        var result = "";
+
+        switch (op) {
+            case "+" :
+                result = add(num1, num2);
+                break;
+            case "-" :
+                result = sub(num1, num2);
+                break;
+            case "*" :
+                result = mul(num1, num2);
+                break;
+            case "/" :
+                result = div(num1, num2);
+                break;
+            default :
+                result = "지원하지 않는 연산자 입니다.";
+        }
+
+        function add(num1, num2){
+            return num1 + num2;
+        }
+
+        function sub(num1, num2) {
+            return num1 - num2;
+        }
+
+        function mul(num1, num2) {
+            return num1 * num2;
+        }
+
+        function div(num1, num2) {
+            return num1 / num2;
+        }
+
+        
+        callback(result);
+
+    }
+
+    function callOne(result) {
+            console.log("두 수의 합은 " + parseInt(result) + "입니다.");
+        }
+        function callTwo(result) {
+            console.log("정답은 " + result + "입니다.");
+        }
+
+
+    
+
+    calculator("+" , 3523, 532423, callOne);
+    calculator("-", 353, 5423, callOne);
+    calculator("*", 83523, 5652423, callOne);
+    calculator("/", 352645733, 532423, callOne);
+
+    calculator("+" , 3523, 532423, callTwo);
+    calculator("-", 353, 5423, callTwo);
+    calculator("*", 83523, 5652423, callTwo);
+    calculator("/", 352645733, 532423, callTwo);
+
+</script>

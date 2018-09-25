@@ -1,0 +1,38 @@
+<script>
+
+    // 클래스를 이용한 함수  1
+
+    var MyClass = {
+        test : function(){
+            console.log("리터럴 방식으로 클래스의 멤버함수(메서드)를 만들 때");
+        }
+    }
+
+    MyClass.test();
+
+
+    // 클래스를 이용한 함수  2
+
+    function MyClass2(){
+        this.test = function(){
+            console.log("Object 방식으로 클래스의 멤버함수(메서드)를 만들 때");
+        };
+    }
+    cla = new MyClass2();
+    cla.test();
+
+    // 클래스를 이용한 함수  3
+
+    function MyClass3() {
+        
+    }
+
+    MyClass3.prototype.test = function(){
+        console.log("prototype 방식으로 클래스의 멤버함수를 만들 때");
+    }
+
+    MyClass3.prototype.test();
+
+    
+
+</script>

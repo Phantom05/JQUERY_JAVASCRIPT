@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn">눌러</button>
+
+    <script>
+        var btn = document.getElementById("btn");
+        var count = 0;
+
+        btn.addEventListener("click", function(){
+            count++;
+            if (count > 10) {
+                count = 1;
+            }
+            console.log(count + " 자바스크립트 어렵다아~");
+            
+        });
+    </script>
+</body>
+</html>

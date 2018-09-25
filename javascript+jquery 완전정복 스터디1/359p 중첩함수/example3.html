@@ -1,0 +1,50 @@
+<script>
+
+    function calculator(a, b, op) {
+
+        var result = "";
+
+        switch (op) {
+            case "+" :
+                result = add(a, b);
+                break;
+            case "-" :
+                result = sub(a, b);
+                break;
+            case "*" :
+                result = mul(a, b);
+                break;
+            case "/" :
+                result = div(a, b);
+                break;
+            default :
+                console.log("지원하지 않는 연산자 입니다.");
+        }
+
+        function add(a, b){
+            return a + b;
+        }
+
+        function sub(a, b){
+            return a - b;
+        }
+
+        function mul(a, b){
+            return a * b;
+        }
+
+        function div(a, b){
+            return a / b;
+        }
+
+        console.log(parseInt(result));
+
+    }
+
+    calculator(5, 20, "+");
+    calculator(213, 25, "-");
+    calculator(656, 342, "*");
+    calculator(6342, 876, "/");
+
+
+</script>
