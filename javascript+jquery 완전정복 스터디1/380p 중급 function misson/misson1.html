@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn">버튼을 눌러주세요.</button>
+    <script>
+        var btn = document.getElementById("btn");
+        var count = 0;
+        var counted = 10;
+
+        btn.addEventListener("click", function(){
+            btnClick(alertMsg);
+        });
+
+        function alertMsg() {
+            alert("10번을 클릭해서 완료되었습니다. count는 0으로 초기화 됩니다.");
+        }
+
+        function btnClick(cal){
+            count++;
+            console.log(count);
+            if(count == counted) {
+                count = 0;
+                cal();
+            }
+        }
+    </script>
+</body>
+</html>
