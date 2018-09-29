@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+</head>
+<body>
+    <p id="output"></p>
+    <button id="stop">정지</button>
+
+    <script>
+        $(document).ready(function(){
+            var op = $("#output");
+            var stop = $("#stop");
+            var count = 0;
+            var text = "";
+
+            var addSetIn = setInterval(addCount, 1000);
+
+            function addCount(){
+                count++;
+                text += count + '\t';
+                op.text(text);
+                
+            }
+
+            stop.click(function(){
+                stopBtn(addSetIn);
+            });
+
+            function stopBtn(func){
+                clearInterval(func);
+            }
+            
+        });
+    </script>
+</body>
+</html>
