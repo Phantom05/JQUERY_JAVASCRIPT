@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .banner {
+            width: 400px;
+            height: 200px;
+            position: absolute;
+            border: 2px solid #000;
+        }
+
+        #banner1 {
+            top: 100px;
+            left: 100px;
+        }
+
+        #banner2 {
+            top: 100px;
+            left: 600px;
+            width: 250px;
+            height: 120px;
+        }
+
+        #btnStart,
+        #btnStop {
+            position: absolute;
+            top:20px;
+            width: 150px;
+            height: 50px;
+            outline: none;
+            font-size: 25px;
+        }
+
+        #btnStart {
+            left: 325px;
+        }
+
+        #btnStop {
+            left: 125px;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="main.js"></script>
+</head>
+<body>
+    <body>
+        <img src="images/logo_01.jpg" class="banner" id="banner1">
+        <img src="images/logo_02.jpg" class="banner" id="banner2">
+    </body>
+    <button id="btnStart">시작</button>
+    <button id="btnStop">정지</button>
+</body>
+</html>

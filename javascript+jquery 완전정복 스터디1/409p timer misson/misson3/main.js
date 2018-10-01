@@ -10,7 +10,7 @@ $(document).ready(function(){
 });
 
 function bannerInit(){
-    banner = $("#banner1");
+    banner = $("#banner");
     btnStart = $("#btnStart");
     btnStop = $("#btnStop");
     for(var i = 1; i < imgLength; i++){
