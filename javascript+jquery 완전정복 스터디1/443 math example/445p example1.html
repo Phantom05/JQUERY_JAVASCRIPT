@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <style>
+        button {
+            position: absolute;
+        }
+        #btnStart {
+            left: 10px;
+        }
+        #btnStop {
+            left: 70px;
+        }
+    </style>
+</head>
+<body>
+    <button id="btnStart">시작</button>
+    <button id="btnStop">정지</button>
+    <div id="pAppend"></div>
+    <script>
+        var pAppend = $("#pAppend");
+        var timerID = 0;
+        var btnStart = $("#btnStart");
+        var btnStop = $("#btnStop");
+
+        $(document).ready(function(){
+            randomEvent(100);
+        });
+
+        
+        function randomMath(timer){
+            if(timerID == 0){   
+                
+                timerID = setInterval(function(){
+                    pAppend.append("<p>" + Math.floor(Math.random() * 50 + 1) + "</p>");
+                    windowScrollbottom();
+                    if(pAppend.children("p").last().text() == 30){
+                        clearInterval(timerID);
+                    }
+                },timer);
+            }
+        }
+        
+        function randomEvent(timer){
+            
+            start();
+            function start(){
+                btnStart.on("click", function(){
+                    randomMath(timer);
+                });
+            }
+            
+            stop();
+            function stop(){
+                btnStop.on("click",function(){
+                    clearInterval(timerID);
+                    timerID = 0;
+                    count = 0;
+                });
+            }
+
+            
+        }
+        
+        function windowScrollbottom(){
+            $(window).scrollTop(pAppend.children("p").last().position().top);
+            btnStart.css({
+                top : pAppend.children("p").last().position().top,
+                left : "200px",
+            });
+            btnStop.css({
+                top : pAppend.children("p").last().position().top,
+                left : "400px",
+            });
+        }
+        
+    </script>
+</body>
+</html>

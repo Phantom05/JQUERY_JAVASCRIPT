@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+</head>
+<body>
+    <script>
+        $(document).ready(function(){
+            random(10);
+            
+        }); 
+        var randomArray = [];
+        var randomArray2 = [];
+        var maxMin = null;
+        
+        var random = function(number){
+            for(var i = 0; i < number; i++){
+                var num = Math.floor(Math.random() * 90) + 11;
+                randomArray.push(num);
+                if(num == 100){
+                    alert("num 이 100이다!!!!!");
+                }
+            }
+            
+            console.log(randomArray);
+
+            for(var i = 0; i < number; i++){
+                maxMin = Math.random() * 100;
+                maxMin = Math.floor(Math.min(100, Math.max(10, maxMin)));
+
+                randomArray2.push(maxMin);
+                if(maxMin == 100){
+                    alert("maxMin 가 100이다!!!!!");
+                }
+            }
+            console.log(randomArray2);
+        }
+         
+    </script>
+</body>
+</html>
