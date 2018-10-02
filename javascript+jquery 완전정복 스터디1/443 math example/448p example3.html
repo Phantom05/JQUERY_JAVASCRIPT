@@ -1,0 +1,17 @@
+<script>
+    var list_count = 105;
+    var menu_max_num = 10;
+    var list_all_count = 0;
+
+    list_all_count = Math.floor(list_count / menu_max_num);
+
+    if(list_count % menu_max_num != 0){
+        list_all_count++;
+    }
+    console.log(list_all_count);
+
+    list_all_count = Math.ceil(list_count / menu_max_num);
+    console.log(list_all_count);
+
+    
+</script>
