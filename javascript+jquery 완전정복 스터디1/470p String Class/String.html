@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>String 클래스 소개</title>
+    <style>
+        ul > li { 
+            font-size: 25px;
+        }
+        table {
+            width: 100%;
+        }
+        table > thead {
+            width: 100%;
+        }
+        table > thead tr th,
+        table > tbody tr td {
+            width: 50%;
+            text-align:center;
+            padding: 5px;
+            font-size: 16.5px;
+            font-weight: bold;
+            border: 1px solid #d3d3d3;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>사이트 로그인 페이지 제작 시 입력받은 아이디와 패스워드 좌우 공백을 없애주는 기능을 만들 때 사용한다.</li>
+        <li>게시판 제작 시 게시물의 특정 문자열을 다른 문자열로 치환하거나 삭제할 때도 사용합니다.</li>
+    </ul>
+
+    <div>
+        <table>
+            <thead>
+                <tr>
+                    <th>프로퍼티</th>
+                    <th>설명</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>length</td>
+                    <td>문자열 개수</td>
+                </tr>
+            </tbody>
+        </table>
+        <table>
+            <thead>
+                <tr>
+                    <th>메서드</th>
+                    <th>설명</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>charAt(n)</td>
+                    <td>n번째 문자 구하기</td>
+                </tr>
+                <tr>
+                    <td>charCodeAt(n)</td>
+                    <td>n번째 문자의 코드 값 구하기</td>
+                </tr>
+                <tr>
+                    <td>concat(str)</td>
+                    <td>문자열 뒤쪽에 str을 연결해 새로운 문자열 만들기</td>
+                </tr>
+                <tr>
+                    <td>indexOf(substr)</td>
+                    <td>substr 문자열이 위치한 위치값 구하기, 앞에서부터 검색 시작</td>
+                </tr>
+                <tr>
+                    <td>lastIndexOf(substr)</td>
+                    <td>substr 문자열이 위치한 위치값 구하기, 뒤에서부터 검색 시작</td>
+                </tr>
+                <tr>
+                    <td>match(reg)</td>
+                    <td>정규표현식(reg)을 활용한 문자열 검색</td>
+                </tr>
+                <tr>
+                    <td>replace(reg.rep)</td>
+                    <td>정규표현식을 활용한 문자열 교체</td>
+                </tr>
+                <tr>
+                    <td>search(reg)</td>
+                    <td>정규표현식을 활용한 문자열 위치 검색</td>
+                </tr>
+                <tr>
+                    <td>slice(str)</td>
+                    <td>문자열을 str로 분할해 배열로 생성해줌</td>
+                </tr>
+                <tr>
+                    <td>substr(start[count])</td>
+                    <td>start번쨰부터 count개수만큼 문자열 추출</td>
+                </tr>
+                <tr>
+                    <td>toLowerCase()</td>
+                    <td>모든 문자열을 소문자로 변환</td>
+                </tr>
+                <tr>
+                    <td>toUpperCase()</td>
+                    <td>모든 문자열을 대문자로 변환</td>
+                </tr>
+                <tr>
+                    <td>trim()</td>
+                    <td>좌우 공백 제거</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

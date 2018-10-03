@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <style>
+        #pannel {
+            position: relative;
+            top: 100px;
+            left: 100px;
+            width: 800px;
+            height: 500px;
+            border: 1px solid #252525;
+        }
+
+        #output {
+            position: absolute;
+            width: 100%;
+            text-align: center;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 25px;
+        }
+    </style>
+</head>
+<body>
+    <div id="pannel">
+        <p id="output">여기에 문자가 출력됩니다.</p>
+    </div>
+</body>
+</html>
+
+<script>
+    var output = $("#output");
+    var str = window.prompt("문자를 입력해 주세요.");
+    var strLen = str.length;
+    var i = 0;
+
+    var timerID = setInterval(function(){
+        var ch = str.charAt(i);
+        output.text(ch);
+        i++;
+
+        if(i > strLen){
+            clearInterval(timerID);
+            output.text("입력한 문자들이 모두 출력되었습니다.");
+        }
+    },1000);
+</script>

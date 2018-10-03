@@ -32,6 +32,11 @@ function fishStop(){
     alert("최종점수는 " + fish_count + "점 입니다.");
     fish_count = 0;
     fish_count_p.text(fish_count);
+    fish.css({
+        left : "50%",
+        top : "50%",
+        trnasform: "trnaslate(-50%, -50%)"
+    });
 }
 
 

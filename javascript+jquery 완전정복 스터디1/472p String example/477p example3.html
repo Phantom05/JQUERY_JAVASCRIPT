@@ -1,0 +1,12 @@
+<script>
+    var str = window.prompt("문자를 입력해 주세요.");
+    var ch = window.prompt(str + "문자중 몇번째 인지 찾고싶은 문자를 입력해주세요.");
+    
+    var char = str.indexOf(ch,2);
+    if(char >= 0){
+        alert("\'" + ch + "\'" + "의 문자는" + char + "번째 문자 입니다.");
+    } else {
+        alert("입력하신 문자는 존재하지 않습니다.");
+    }
+    
+</script>
