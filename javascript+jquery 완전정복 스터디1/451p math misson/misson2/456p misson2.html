@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    
+    <style>
+        #btnStart {
+            width: 50%; height: 50px;
+            border: none; outline: none;
+            background: #252525; color: #fff; font-size: 25px; font-weight: bold;
+            cursor: pointer;
+        }
+        #panel {
+            position: relative;
+            top: 100px;
+            left: 100px;
+            width: 800px;
+            height: 600px;
+            border: 2px solid #ad1741;
+        }
+        #fish {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    
+</head>
+<body>
+    <button id="btnStart">시작</button>
+    <div id="panel">
+        <img src="fish1.png" alt="" id="fish">
+    </div>
+    <p id="fish_count">0</p>
+</body>
+</html>
+
+<script src="main.js"></script>
