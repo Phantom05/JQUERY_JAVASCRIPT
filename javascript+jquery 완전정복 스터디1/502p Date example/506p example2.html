@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+</head>
+<body>
+    <p id="output"></p>
+</body>
+</html>
+
+<script>
+    var output = $("#output");
+    var obj = new Date();
+    var year = obj.getFullYear();
+    var month = obj.getMonth() + 1;
+    var date = obj.getDate();
+    var day = obj.getDay();
+    var dayAry = ["일", "월", "화", "수", "목", "금", "토"];
+
+    output.text(year + "년 " + month + "월 " + date + "일 " + dayAry[day] + "요일");
+</script>
