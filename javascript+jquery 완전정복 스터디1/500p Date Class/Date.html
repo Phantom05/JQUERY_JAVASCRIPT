@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Date 클래스 소개</title>
+    <style>
+        ul > li { 
+            font-size: 25px;
+        }
+        table {
+            width: 100%;
+        }
+        table > thead {
+            width: 100%;
+        }
+        table > thead tr th,
+        table > tbody tr td {
+            width: 50%;
+            text-align:center;
+            padding: 5px;
+            font-size: 16.5px;
+            font-weight: bold;
+            border: 1px solid #d3d3d3;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>다이어리 같은 프로젝트에서 달력을 만들 때 Date 클래스를 사용합니다.</li>
+        <li>현재 시간을 출력하는 시계를 만들 때에도 사용합니다.</li>
+        <li>슈팅 게임을 만드는 경우 플레이 경과 시간을 알아낼 때에도 사용합니다.</li>
+        <li>D-Day를 출력할 때에도 사용합니다.</li>
+    </ul>
+
+    <div>
+        <table>
+            <thead>
+                <tr>
+                    <th>메서드</th>
+                    <th>설명</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>getDate()</td>
+                    <td>로컬시간을 사용하여 일(월 기준)을 반환</td>
+                </tr>
+                <tr>
+                    <td>getDay()</td>
+                    <td>로컬시간을 사용하여 일(주 기준, 즉 요일)을 반환</td>
+                </tr>
+                <tr>
+                    <td>getFullYear()</td>
+                    <td>로컬시간을 사용하여 연도를 반환</td>
+                </tr>
+                <tr>
+                    <td>getHours()</td>
+                    <td>로컬시간을 사용하여 시간을 반환</td>
+                </tr>
+                <tr>
+                    <td>getMilliseconds()</td>
+                    <td>로컬시간을 사용하여 밀리초를 반환</td>
+                </tr>
+                <tr>
+                    <td>getMinutes()</td>
+                    <td>로컬시간을 사용하여 분을 반환</td>
+                </tr>
+                <tr>
+                    <td>getMonth()</td>
+                    <td>로컬시간을 사용하여 월을 반환</td>
+                </tr>
+                <tr>
+                    <td>getSeconds()</td>
+                    <td>로컬시간을 사용하여 초를 반환</td>
+                </tr>
+                <tr>
+                    <td>getTime()</td>
+                    <td>1970년 1월 1일 00:00:00부터 현재시간 까지 경과한 시간을 밀리초로 반환6</td>
+                </tr>
+                <tr>
+                    <td>getYear()</td>
+                    <td>로컬시간을 사용하여 연도 값을 반환, getFullYear() 사용을 권장</td>
+                </tr>
+                <tr>
+                    <td>setDate()</td>
+                    <td>로컬시간을 사용하여 일(월 기준)을 설정</td>
+                </tr>
+                <tr>
+                    <td>setFullYear()</td>
+                    <td>로컬시간을 사용하여 연도를 설정</td>
+                </tr>
+                <tr>
+                    <td>setHours()</td>
+                    <td>로컬시간을 사용하여 시간을 설정</td>
+                </tr>
+                <tr>
+                    <td>setMilliseconds()</td>
+                    <td>로컬시간을 사용하여 밀리초를 설정</td>
+                </tr>
+                <tr>
+                    <td>setMinutes()</td>
+                    <td>로컬시간을 사용하여 분을 설정</td>
+                </tr>
+                <tr>
+                    <td>setMonth()</td>
+                    <td>로컬시간을 사용하여 월을 설정</td>
+                </tr>
+                <tr>
+                    <td>setSeconds()</td>
+                    <td>로컬시간을 사용하여 초를 설정</td>
+                </tr>
+                <tr>
+                    <td>setTime()</td>
+                    <td>날짜와 시간 값을 설정</td>
+                </tr>
+                <tr>
+                    <td>setYear()</td>
+                    <td>로컬시간을 사용하여 연도 값을 설정, setFullYear() 사용을 권장</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
