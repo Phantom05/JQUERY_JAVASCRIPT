@@ -1,0 +1,15 @@
+<script>
+    var aryData = [5, 2, 8, 9, 3, 6, 4, 1, 77];
+    console.log(aryData.join(" => "));
+    aryData.sort(function(a, b){
+        return a - b;
+    });
+    console.log(aryData.join(" => "));
+    aryData.sort(function(a, b){
+        console.log(a < b);
+        console.log(a + " " + b);
+        return a < b;
+        
+    });
+    console.log(aryData.join(" => "));
+</script>
