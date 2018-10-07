@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #output {
+            display: block;
+            width: 500px;
+            height: 300px;
+            margin: 200px auto 0;
+            text-align: center;
+            line-height: 300px;
+            font-size: 30px;
+            font-weight: bold;
+            border: 2px solid #695846;
+            color: #695846;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+</head>
+<body>
+    <p id="output">00:00:00</p>
+</body>
+</html>
+
+<script>
+    var output = null;
+
+    $(document).ready(function(){
+        output = $("#output");
+        clock();
+    });
+
+    function clock(){
+
+        function showTime(){
+            var objDate = new Date();
+            var hours = objDate.getHours();
+            var minutes = objDate.getMinutes();
+            var seconds = objDate.getSeconds();
+
+            output.text(hours + ":" + minutes + ":" + seconds);
+                
+        }
+        showTime();
+        setInterval(function(){
+            showTime();
+        }, 500);
+    }
+
+</script>
