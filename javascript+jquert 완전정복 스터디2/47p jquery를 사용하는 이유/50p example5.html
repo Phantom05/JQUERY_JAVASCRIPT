@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <style>
+        #panel {
+            width: 600px;
+            height: 400px;
+            margin: 0 auto;
+            position: relative;
+            margin-top: 200px;
+            display:block;
+            border: 1px solid #695846;
+        }
+
+        #panel > img { 
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        #btn {
+            display: block;
+            margin: 0 auto;
+            margin-top: 15px;
+            width: 600px;
+            border: none;
+            outline: none;
+            color: #fff;
+            background: #695846;
+            padding: 15px 0;
+            font-size: 22px;
+            font-weight: bold;
+            letter-spacing: 25px;
+            text-align: center;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="panel">
+        <img src="fish1.png" alt="피쉬" id="fish">
+    </div>
+    <button id="btn">이동</button>
+</body>
+</html>
+
+<script>
+
+    // javascript
+    window.onload = function(){
+        var fish = document.getElementById("fish");
+        var btn = document.getElementById("btn");
+
+        var left = 0;
+        var timerID = 0;
+
+        btn.addEventListener("click", function(){
+            timerID = setInterval(function(){
+                left++;
+                fish.style.left = left + "px";
+
+                if(left >= 430) {
+                    clearInterval(timerID);
+                    timerID = 0;
+                }
+            },1);
+        });
+    }
+
+    //jquery
+    $(document).ready(function(){
+        var fish = $("#fish");
+        var btn = $("#btn");
+
+        btn.on("click", function(){
+            fish.animate({
+                left: 430
+            }, 5000);
+        });
+        
+    });
+
+
+</script>

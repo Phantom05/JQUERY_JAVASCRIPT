@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <style>
+        #header { 
+            width: 80%;
+            height: 500px;
+            margin: 100px auto;
+            border: 1px solid #695846;
+            text-transform: uppercase;
+            text-align: center;
+            line-height: 500px;
+            font-size: 40px;
+            color: #695846;
+        }
+
+        #header p {
+            width: 50%;
+            height: 20px;
+            margin:10px auto;
+            border: 1px solid #695846;
+        }
+    </style>
+</head>
+<body>
+        <div id="header">
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+        </div>
+</body>
+</html>
+
+<script>
+
+    // javascript
+    var ps = document.getElementsByTagName("p");
+    for(var i = 0; i < ps.length; i++) {
+        ps[i].style.border = "3px solid #ff0000";
+    }
+
+    // jquery
+    var ps = $("p");
+    ps.css("border" , "5px solid yellow");
+
+</script>
