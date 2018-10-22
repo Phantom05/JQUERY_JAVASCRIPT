@@ -1,0 +1,12 @@
+div, p, ul, li {
+    border: 1px solid #eeeeee;
+    margin: 10px;
+}
+
+ul {
+    padding: 10px;
+}
+
+li.select {
+    background-color: #ccc;
+}
