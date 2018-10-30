@@ -1,88 +1,112 @@
-let input = $("#menuName");
-let menu = $("ul.menu");
-let add = $("#add");
-let update = $("#update");
-let remove = $("#remove");
-let up = $("#up");
-let down = $("#down");
-let inText = "";
-let values = "";
-let clickChk = null;
+let $input = null;
+let $menu = null;
+let $selectedItem = null;
 
+$(document).ready(function(){
+    init();
+    initEvent();
+});
 
-// 메뉴 추가 텍스트
-function addHtml() {
-    values = input.val();
-    inText = "<li>"+values+"</li>";
+function init() {
+    $menu = $("ul.menu");
+    $input = $("#menuName");
 }
 
-// 메뉴 추가
-function eventFunc() {
-    add.on("click", function(){
-        addHtml();
-        if(menu.find("li").hasClass("select")){
-            menu.find("li.select").after(inText);
-        } else {
-            menu.append(inText);
-        }
+function initEvent() {
+    // 메뉴추가
+    $("#add").on("click",function(){
+        addMenu();
+    });
+
+    $menu.on("click", "li", function(){
+        selectItem($(this));
+    });
+
+    // 업데이트
+    $("#update").on("click",function(){
+        updateMenuItem();
+    });
+
+    // 선택 아이템 삭제
+    $("#remove").on("click", function(){
+        removeMenuItem();
+    });
+
+    // 선택 메뉴 아이템을 위로 이동
+    $("#up").on("click", function(){
+        upMenuItem();
+    });
+
+    // 선택 메뉴 아이템을 아래로 이동
+    $("#down").on("click", function(){
+        downMenuItem();
     });
 }
 
-// click 선택할 때
-function selectBack() {
-    let list = menu.find("li");
-    list.on("click", function(){
-        if($(this).attr("class") == "select") {
-            $(this).removeClass("select");
-        } else {
-            clickChk = $(this).attr("class");
-            console.log(clickChk);
-            $(this).addClass("select").siblings().removeClass("select");
-        }
-    });
+
+// 메뉴 추가 처리
+function addMenu() {
+    let menuName = $input.val();
+    let newMenuItem = "<li>"+menuName+"</li>";
+
+    if($selectedItem){
+        $selectedItem.after(newMenuItem);
+    } else {
+        $menu.append(newMenuItem);
+    }
 }
 
-// 메뉴 수정
-function menuFixed() {
-    update.on("click", function(){
-        addHtml();
-        if(menu.find("li").hasClass("select")){
-            menu.find("li.select").html(values);
-        } else {
-            alert("선택된 메뉴가 존재하지 않아 수정할 수 없습니다.");
-        }
-    });
+// 메뉴 선택 처리
+function selectItem($item) {
+    if($selectedItem!=null){
+        $selectedItem.removeClass("select");
+    }
+    $selectedItem = $item;
+    $selectedItem.addClass("select");
 }
 
-// 메뉴 삭제
-function menuRemove() {
-    remove.on("click", function(){
-        if(menu.find("li").hasClass("select")){
-            menu.find("li.select").remove();
-        } else {
-            alert("선택된 메뉴가 존재하지 않아 삭제할 수 없습니다.");
-        }
-    });
+// 메뉴 아이템 이름 수정하기
+function updateMenuItem(){
+    if($selectedItem){
+        let menuName = $input.val();
+        $selectedItem.html(menuName);
+    } else {
+        alert("선택 메뉴가 존재하지 않습니다.");
+    }
 }
 
-// 메뉴 아래로 이동
-function menuBefore(){
-    down.on("click", function(){
-        if(menu.find("li").hasClass("select")){
-            menu.find("li.select").after(menu.find("li.select").next());
-        } else {
-            alert("선택된 메뉴가 존재하지 않아 이동할 수 없습니다.");
-        }
-    });
+// 선택 메뉴 아이템 삭제
+function removeMenuItem(){
+    if($selectedItem){
+        $selectedItem.remove();
+        $selectedItem = null;
+    } else {
+        alert("선택 메뉴가 존재하지 않습니다.");
+    }
 }
 
-// input 에 쓰고 추가를 눌렀을 때 
-eventFunc();
-// click 했을 때
-selectBack();
-// input 에 쓰고 수정을 눌렀을 때
-menuFixed();
-// select 을 하고 삭제를 눌렀을 때
-menuRemove();
-// select 을 하고 다운을 눌렀을 때
-menuBefore();
+// 위로 이동
+function upMenuItem(){
+    if($selectedItem){
+        let $prevItem = $selectedItem.prev();
+        if($prevItem){
+            $selectedItem.insertBefore($prevItem);
+        }
+    } else {
+        alert("선택 메뉴가 존재하지 않습니다.");
+    }
+}
+
+// 아래로 이동
+function downMenuItem(){
+    if($selectedItem){
+        let $nextItem = $selectedItem.next();
+        if($nextItem){
+            $selectedItem.insertAfter($nextItem);
+        }
+    } else {
+        alert("선택 메뉴가 존재하지 않습니다.");
+    }
+}
+
+
