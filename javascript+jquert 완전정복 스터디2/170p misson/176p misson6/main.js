@@ -78,7 +78,7 @@ function updateMenuItem(){
 // 선택 메뉴 아이템 삭제
 function removeMenuItem(){
     if($selectedItem){
-        $selectedItem.remove();
+        $select=dItem.remove();
         $selectedItem = null;
     } else {
         alert("선택 메뉴가 존재하지 않습니다.");
